@@ -1,0 +1,13 @@
+:root {
+    /* Colors */
+    --color-text: #7D847D;
+    --color-primary: #345536;
+    --color-secondary: #FFD151;
+    --color-light: #A9C6AB;
+    --color-dark: #000000;
+    --color-bg: #FBFCF0;
+
+    /* Fonts */
+    --font-poppins: 'poppins';
+    --font-kirang-haerang: 'Kirang Haerang';
+}

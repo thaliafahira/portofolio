@@ -1,0 +1,35 @@
+{
+    "experiences": [
+      {
+        "company": "PT Bank Mandiri (Persero)",
+        "period": "June 2024 - July 2024",
+        "position": "Intern - Wholesale Banking Transaction",
+        "responsibilities": [
+          "Analyzed Kopra Giro Multicurrency requirements.",
+          "Created Figma mockups for new features.",
+          "Designed system flow for Cashback Engine.",
+          "Developed a Giro data dashboard.",
+          "Proposed ideas for the Giro campaign."
+        ]
+      },
+      {
+        "company": "Freelance (Kopra)",
+        "period": "August 2024",
+        "position": "Web UI Designer",
+        "responsibilities": [
+          "Designed 42 UI slides for Kopra Resolve."
+        ]
+      },
+      {
+        "company": "IGDX BOOTCAMP KOMINFO",
+        "period": "May 2024",
+        "position": "Registration",
+        "responsibilities": [
+          "Managed 100+ participant registrations.",
+          "Sent confirmations and details.",
+          "Handled inquiries and support."
+        ]
+      }
+    ]
+  }
+  

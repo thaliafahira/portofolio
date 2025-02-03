@@ -1,0 +1,35 @@
+[
+    {
+      "title": "Hello Mama",
+      "description": "Pregnancy app that provides a welcoming and informative experience for expectant mothers.",
+      "achievement": "1st Place UI/UX ICONFEST 2.0 (2024)",
+      "link": "https://bit.ly/UIUXHelloMama",
+      "image": ""
+    },
+    {
+      "title": "Samudra",
+      "description": "Fishing app that provides a user-friendly and informative experience for fishermen.",
+      "achievement": "1st Place Finalist MIFEST UI/UX",
+      "link": "https://bit.ly/UIUXSamudra",
+      "image": ""
+    },
+    {
+      "title": "Shopee (Final Project DigitalSkola Bootcamp)",
+      "description": "UI/UX improvements for a better shopping experience.",
+      "achievement": "DigitalSkola UI/UX Bootcamp",
+      "link": "https://bit.ly/UIUXFinalProjectDigitalSkola",
+      "image": ""
+    },
+    {
+      "title": "Mariposa",
+      "description": "An innovative digital solution that supports mental health through inclusive and empathetic technology.",
+      "achievement": "Finalist Techcomfest 2025",
+      "link": "https://bit.ly/UIUXMariposa",
+      "image": ""
+    },
+    {
+      "title": "Bank Mandiri: Kopra Resolve (Freelance Project)",
+      "description": "Complaint handling features available on Kopra by Bank Mandiri.",
+      "image": ""
+    }
+  ]

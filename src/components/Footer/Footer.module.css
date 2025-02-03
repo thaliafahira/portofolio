@@ -1,0 +1,26 @@
+@import "../../vars.css";
+
+.footer {
+    background-color: var(--color-primary);
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.copyrightText {
+    color: var(--color-text);
+    font-family: var(--font-poppins);
+    font-size: 1rem;
+    align-items: center;
+    text-align: center ;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links {
+        gap: 1rem;
+    }
+}

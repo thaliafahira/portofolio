@@ -1,0 +1,204 @@
+@import "../../vars.css";
+
+.container {
+    padding: 60px 24px;
+    background-color: var(--color-bg);
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.title {
+    font-family: var(--font-kirang-haerang);
+    font-size: 50px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 24px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.skillCard {
+    position: relative;
+    height: 120px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.cardContent {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.hoverEffect {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(var(--color-primary-rgb), 0.03),
+        rgba(var(--color-secondary-rgb), 0.03)
+    );
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skillCard.active .cardContent {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.skillCard.active .hoverEffect {
+    opacity: 1;
+}
+
+.iconBox {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: var(--color-bg);
+    transition: all 0.3s ease;
+}
+
+.skillCard.active .iconBox {
+    transform: scale(1.1);
+    background-color: rgba(var(--color-primary-rgb), 0.05);
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skillCard.active .icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.name {
+    font-family: var(--font-poppins);
+    font-size: 14px;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.skillCard.active .name {
+    color: var(--color-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+    }
+
+    .skillCard {
+        height: 110px;
+    }
+
+    .iconBox {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 32px 16px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 16px;
+    }
+
+    .skillCard {
+        height: 100px;
+    }
+
+    .iconBox {
+        width: 44px;
+        height: 44px;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .skillCard:active .cardContent {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .skillCard:active .hoverEffect {
+        opacity: 1;
+    }
+
+    .skillCard:active .iconBox {
+        transform: scale(1.1);
+        background-color: rgba(var(--color-primary-rgb), 0.05);
+    }
+
+    .skillCard:active .icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .skillCard:active .name {
+        color: var(--color-primary);
+    }
+}
