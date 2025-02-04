@@ -18,17 +18,22 @@ export const Hero = () => {
                             alt="Logo" 
                             className={styles.logo}
                         />
+                        <div className={styles.mobileProfile}>
+                        <img 
+                            src={getImageUrl("hero/mobile.png")} 
+                            alt="Profile" 
+                            className={styles.profileImage}
+                        />
+                    </div>
                     </div>
                     <p className={styles.description}>
                         Front-end Developer & UI/UX Designer
                     </p>
                     <div className={styles.actions}>
-                        <a href="https://drive.google.com/file/d/13Rufg8vNooX0ob_TgVENZ-qgxnqVaDxX/view?usp=sharing">
-                            <button className={styles.cta}>
-                                View my CV!
-                                <span className={styles.ctaArrow}>→</span>
-                            </button>
-                        </a>  
+                        <button className={styles.cta}>
+                            View my CV!
+                            <span className={styles.ctaArrow}>→</span>
+                        </button>
                         <div className={styles.socials}>
                             <a href="https://www.linkedin.com/in/thaliafahira/" 
                                target="_blank" 
@@ -50,4 +55,4 @@ export const Hero = () => {
             </div>
         </section>
     );
-}
+};
