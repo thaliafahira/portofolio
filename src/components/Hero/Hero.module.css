@@ -114,10 +114,20 @@
     transition: all 0.3s ease;
     font-weight: 700;
     font-family: var(--font-poppins);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a.cta {
+    text-decoration: none !important;
 }
 
 .ctaArrow {
     transition: transform 0.3s ease;
+    text-decoration: none;
 }
 
 .cta:hover {
