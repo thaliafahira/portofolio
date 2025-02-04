@@ -7,19 +7,26 @@ import { Portofolio } from './components/Portofolio/Portofolio';
 import { Award } from './components/Award/Award';
 import { Footer } from './components/Footer/Footer';
 
-
 function App() {
-
   return (
     <div className={styles.App}>
       <Navbar />
-      <Hero />
-      <Skill />
-      <Experience />
-      <Portofolio/>
-      <Award />
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="skill">
+        <Skill />
+      </div>
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="project">
+        <Portofolio />
+      </div>
+      <div id="award">
+        <Award />
+      </div>
       <Footer />
-    
     </div>
   )
 }

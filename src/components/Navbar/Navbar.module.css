@@ -1,10 +1,28 @@
 @import "../../vars.css";
 
+@import "../../vars.css";
+
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 10%;
+    background-color: var(--color-primary);
+    transition: background 0.3s ease;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
-    z-index: 2;
-    margin: 0 10%;
-    padding-top: 30px;
+}
+
+.logo img {
+    width: 130px;
+    height: 75px;
 }
 
 .navContainer {
@@ -59,16 +77,139 @@
 
 @media screen and (max-width: 830px) {
     .navbar {
-        flex-direction: column;
-        align-items: center;
-        position: relative;
+        padding: 10px 5%;
     }
 
     .navContent {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+    .menuToggle {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 20;
+        margin-top: 20px; 
+    }
+
+    .menuIcon {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
         position: absolute;
-        top: 30px;
-        right: 10%;
-        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+    }
+
+    .menuIcon::before,
+    .menuIcon::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        left: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menuIcon::before {
+        top: -10px;
+    }
+
+    .menuIcon::after {
+        bottom: -10px;
+    }
+
+    .menuIcon.open {
+        background-color: transparent;
+    }
+
+    .menuIcon.open::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .menuIcon.open::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    .mobileNavLinks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-primary);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        z-index: 15;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobileNavLinks.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobileNavLink {
+        color: white;
+        text-decoration: none;
+        font-family: var(--font-kirang-haerang);
+        font-size: 30px;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .mobileNavLink:hover {
+        transform: scale(1.1);
+    }
+
+    .mobileNavLink::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+    }
+
+    .mobileNavLink:hover::after {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .navContent {
+        position: relative;
+        top: 0;
+        right: 0;
     }
 
     .navLinks {
