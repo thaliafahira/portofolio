@@ -23,10 +23,12 @@ export const Hero = () => {
                         Front-end Developer & UI/UX Designer
                     </p>
                     <div className={styles.actions}>
-                        <button className={styles.cta}>
-                            View my CV!
-                            <span className={styles.ctaArrow}>→</span>
-                        </button>
+                        <a href="https://drive.google.com/file/d/13Rufg8vNooX0ob_TgVENZ-qgxnqVaDxX/view?usp=sharing">
+                            <button className={styles.cta}>
+                                View my CV!
+                                <span className={styles.ctaArrow}>→</span>
+                            </button>
+                        </a>  
                         <div className={styles.socials}>
                             <a href="https://www.linkedin.com/in/thaliafahira/" 
                                target="_blank" 
