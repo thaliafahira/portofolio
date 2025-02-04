@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Experience.module.css';
 import workData from "../../data/work.json";
 import organizationData from "../../data/organization.json";
+import { getImageUrl } from '../../utils';
 
 export const Experience = () => {
   const [activeTab, setActiveTab] = useState('work');
@@ -49,6 +50,15 @@ export const Experience = () => {
             <div className={styles.organizationGrid}>
               {organizationData.map((org, index) => (
                 <div key={index} className={styles.orgCard}>
+                  {org.image && org.image.trim() !== "" && (
+                    <div className={styles.orgImageContainer}>
+                      <img 
+                        src={getImageUrl(org.image)}  
+                        alt={`${org.organization} logo`}
+                        className={styles.orgImage}
+                      />
+                    </div>
+                  )}
                   <div className={styles.orgHeader}>
                     <h3 className={styles.orgRole}>{org.role}</h3>
                     <p className={styles.orgName}>{org.organization}</p>

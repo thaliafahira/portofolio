@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Portofolio.module.css';
 import UIUXData from "../../data/projectuiux.json";
 import WebData from "../../data/projectweb.json";
+import { getImageUrl } from '../../utils';
 
 export const Portofolio = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -53,6 +54,15 @@ export const Portofolio = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
+            {project.image && (
+              <div className={styles.imageWrapper}>
+                <img 
+                  src={getImageUrl(project.image)} 
+                  alt={project.title}
+                  className={styles.projectImage}
+                />
+              </div>
+            )}
             <div className={styles.projectContent}>
               <div className={styles.projectHeader}>
                 <h3 className={styles.projectTitle}>{project.title}</h3>
