@@ -8,8 +8,6 @@ export const Contact = () => {
   const services = [
     { name: 'Mobile UI', price: '25k/slide' },
     { name: 'Desktop UI', price: '30k/slide' },
-    { name: 'User Flow', price: '15k' },
-    { name: 'Wireframe', price: '30k/project' }
   ];
 
   const handleSubmit = (e) => {
@@ -84,7 +82,7 @@ export const Contact = () => {
                   rel="noopener noreferrer"
                   className={styles.whatsapp}
                 >
-                  WhatsApp: +62 811109973 (Dinda)
+                  WhatsApp
                 </a>
               </div>
             </div>
