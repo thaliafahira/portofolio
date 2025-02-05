@@ -1,203 +1,159 @@
-@import "../../vars.css";
-
-.container {
-    padding: 80px 24px;
-}
-
-.wrapper {
-    max-width: 1100px;
+.contact {
+    padding: 80px 0;
+    background-color: var(--color-bg);
+  }
+  
+  .container {
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-.title {
-    font-family: var(--font-kirang-haerang);
-    font-size: 50px;
-    color: white;
+    padding: 0 20px;
+  }
+  
+  .title {
     text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-text);
     margin-bottom: 40px;
-}
-
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
-
-.contactInfo {
-    padding-right: 40px;
-}
-
-.subtitle {
-    font-family: var(--font-poppins);
-    font-size: 24px;
-    color: var(--color-primary);
-    margin-bottom: 16px;
-}
-
-.description {
-    font-family: var(--font-poppins);
-    font-size: 16px;
-    color: var(--color-text);
-    line-height: 1.6;
-    margin-bottom: 32px;
-}
-
-.socialLinks {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 32px;
-}
-
-.socialLink {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
-    background-color: var(--color-bg);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--color-primary);
-    font-family: var(--font-poppins);
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.socialLink:hover {
-    background-color: var(--color-light);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.contactDetails {
+    font-family: var(--font-kirang-haerang);
+  }
+  
+  .content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-}
-
-.contactItem {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.contactLabel {
-    font-family: var(--font-poppins);
-    font-size: 14px;
-    color: var(--color-text);
-    opacity: 0.8;
-}
-
-.contactValue {
-    font-family: var(--font-poppins);
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-}
-
-.contactValue:hover {
-    text-decoration: underline;
-}
-
-.contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    background-color: var(--color-bg);
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-}
-
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.label {
-    font-family: var(--font-poppins);
-    font-size: 14px;
-    color: var(--color-text);
-}
-
-.input,
-.textarea {
-    padding: 12px 16px;
-    border: 1px solid var(--color-light);
-    border-radius: 8px;
-    font-family: var(--font-poppins);
-    font-size: 14px;
-    color: var(--color-text);
+    gap: 40px;
+  }
+  
+  .services {
     background-color: white;
-    transition: border-color 0.3s ease;
-}
-
-.input:focus,
-.textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-.textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.submitButton {
-    margin-top: 8px;
-    padding: 14px 28px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+  }
+  
+  .serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .serviceButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .serviceButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .serviceButton.selected {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  .serviceName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .servicePrice {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .contactInfo {
+    text-align: center;
+  }
+  
+  .form {
+    margin-bottom: 30px;
+  }
+  
+  .submitButton {
+    padding: 15px 40px;
+    font-size: 1.1rem;
     background-color: var(--color-primary);
     color: white;
     border: none;
     border-radius: 8px;
-    font-family: var(--font-poppins);
-    font-size: 16px;
-    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.submitButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+  }
+  
+  .submitButton:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .submitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .directContact {
+    margin-top: 30px;
+  }
+  
+  .directContact p {
+    margin-bottom: 10px;
+    color: var(--color-text);
+  }
+  
+  .whatsapp {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .whatsapp:hover {
+    background-color: #128C7E;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      padding: 60px 0;
     }
-
-    .contactInfo {
-        padding-right: 0;
+    
+    .serviceGrid {
+      grid-template-columns: 1fr;
     }
-
+    
     .title {
-        font-size: 40px;
+      font-size: 2rem;
     }
-
-    .subtitle {
-        font-size: 20px;
+    
+    .submitButton {
+      width: 100%;
     }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 40px 16px;
+  }
+  
+  @media (max-width: 480px) {
+    .contact {
+      padding: 40px 0;
     }
-
+    
+    .services {
+      padding: 20px;
+    }
+    
     .title {
-        font-size: 35px;
-        margin-bottom: 30px;
+      font-size: 1.8rem;
     }
-
-    .contactForm {
-        padding: 24px;
-    }
-
-    .socialLinks {
-        flex-wrap: wrap;
-    }
-}
+  }
