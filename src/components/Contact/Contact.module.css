@@ -52,6 +52,7 @@
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: var(--color-text);
   }
   
   .serviceButton:hover {
