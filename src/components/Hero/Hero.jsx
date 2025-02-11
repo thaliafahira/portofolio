@@ -3,6 +3,11 @@ import styles from './Hero.module.css';
 import { getImageUrl } from '../../utils';
 
 export const Hero = () => {
+    const handleCVClick = () => {
+        // Open CV in a new tab
+        window.open(getImageUrl("cv/ThaliaCV.pdf"), '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <section className={styles.hero} style={{
             backgroundImage: `url(${getImageUrl("hero/profpic.png")})`,
@@ -19,33 +24,38 @@ export const Hero = () => {
                             className={styles.logo}
                         />
                         <div className={styles.mobileProfile}>
-                        <img 
-                            src={getImageUrl("hero/mobile.png")} 
-                            alt="Profile" 
-                            className={styles.profileImage}
-                        />
-                    </div>
+                            <img 
+                                src={getImageUrl("hero/mobile.png")} 
+                                alt="Profile" 
+                                className={styles.profileImage}
+                            />
+                        </div>
                     </div>
                     <p className={styles.description}>
                         Front-end Developer & UI/UX Designer
                     </p>
                     <div className={styles.actions}>
-                        <button className={styles.cta}>
+                        <button 
+                            onClick={handleCVClick}
+                            className={styles.cta}
+                        >
                             View my CV!
                             <span className={styles.ctaArrow}>→</span>
                         </button>
                         <div className={styles.socials}>
-                            <a href="https://www.linkedin.com/in/thaliafahira/" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               className={styles.socialLink}
+                            <a 
+                                href="https://www.linkedin.com/in/thaliafahira/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={styles.socialLink}
                             >
                                 <img src={getImageUrl("hero/linkedin.png")} alt="LinkedIn" />
                             </a>
-                            <a href="https://github.com/thaliafahira/" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               className={styles.socialLink}
+                            <a 
+                                href="https://github.com/thaliafahira/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={styles.socialLink}
                             >
                                 <img src={getImageUrl("hero/github.png")} alt="GitHub" />
                             </a>
