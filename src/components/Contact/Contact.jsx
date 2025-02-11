@@ -6,8 +6,8 @@ export const Contact = () => {
   const [selectedService, setSelectedService] = useState('');
   
   const services = [
-    { name: 'Mobile UI', price: '25k/slide' },
-    { name: 'Desktop UI', price: '30k/slide' },
+    { name: 'Mobile UI', price: '20k/slide' },
+    { name: 'Desktop UI', price: '25k/slide' },
   ];
 
   const handleSubmit = (e) => {
