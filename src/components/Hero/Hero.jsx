@@ -4,8 +4,9 @@ import { getImageUrl } from '../../utils';
 
 export const Hero = () => {
     const handleCVClick = () => {
-        // Open CV in a new tab
-        window.open(getImageUrl("cv/ThaliaCV.pdf"), '_blank', 'noopener,noreferrer');
+       
+        const cvUrl = "https://drive.google.com/file/d/1OYlFsjnAnRIi-s_9gJ36fQ4mmhlFGtIn/view?usp=sharing";
+        window.open(cvUrl, '_blank', 'noopener,noreferrer');
     };
 
     return (
