@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Contact.module.css';
 
 export const Contact = () => {
-  const [activeTab, setActiveTab] = useState('services');
+  const [activeTab, setActiveTab] = useState('contact');
   const [selectedService, setSelectedService] = useState('');
   
   const services = [
@@ -26,7 +26,7 @@ export const Contact = () => {
       <div className={styles.container}>
         <h2 className={styles.title}>Contact Me</h2>
         
-        {/* Tab Navigation */}
+    
         <div className={styles.tabContainer}>
         <button
             className={`${styles.tabButton} ${activeTab === 'contact' ? styles.active : ''}`}
@@ -43,7 +43,7 @@ export const Contact = () => {
         </div>
         
         <div className={styles.content}>
-          {/* Services Tab */}
+  
           {activeTab === 'services' && (
             <div className={styles.services}>
               <h3>Select Service</h3>
