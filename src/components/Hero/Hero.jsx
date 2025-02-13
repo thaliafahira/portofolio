@@ -33,7 +33,7 @@ export const Hero = () => {
                         </div>
                     </div>
                     <p className={styles.description}>
-                        Front-end Developer & UI/UX Designer
+                        UI/UX Designer & Front-end Developer 
                     </p>
                     <div className={styles.actions}>
                         <button 
